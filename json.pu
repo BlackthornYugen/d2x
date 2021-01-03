@@ -1,0 +1,59 @@
+@startjson droneEncrypted
+{
+  "operator": {
+    "firstName": "John",  
+    "lastName": "Steel",
+    "callsign": "jskw",
+    "location": {
+      "ciphertext": "EncryptedBase64Payload=="
+    }
+  },
+  "drone": {
+    "location": {
+      "lat": 4.2,
+      "longitude": 44.5
+    }
+  },
+  "encryption": {
+    "isEncrypted": true,
+    "sessionKeys": [["a", "base64"], ["b", "base64"], ["c", "base64"]]
+  }
+}
+@endjson
+
+@startjson dronePlaintext
+{
+  "operator": {
+    "firstName": "John",  
+    "lastName": "Steel",
+    "callsign": "jskw",
+    "location": {
+      "lat": 4.4,
+      "longitude": 44.7
+    }
+  },
+  "drone": {
+    "location": {
+      "lat": 4.2,
+      "longitude": 44.5
+    }
+  }
+}
+@endjson
+
+
+@startuml droneEncryptedFlow
+Drone -> Drone : sleep(1000)
+Drone -\ App : broadcast(droneEncrypted)
+Drone -> Drone : sleep(1000)
+Drone -\ App : broadcast(droneEncrypted)
+Drone -> Drone : sleep(1000)
+Drone -\ App : broadcast(droneEncrypted)
+App -> App ++ : UI Tap "LocateDrone"
+App -> App: parse(droneEncrypted)
+App -> Server ++ : Decrypt("EncryptedBase64Payload==")
+Server -\ AuditLog : {"client": "joe@yyz-security.ca", "request": "base64-sha256-sum=="}
+Server -> App -- : {"location": { "lat": 4.4, "longitude": 44.7 }
+deactivate App
+AuditLog -\ Server: {"saved": "base64-sha256-sum=="}
+@enduml

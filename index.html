@@ -1,0 +1,48 @@
+<style>
+    #cf {
+    position:relative;
+    margin:0 auto;
+    }
+
+    #cf img {
+    position:absolute;
+    left:0;
+    /* -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out; */
+    transition: opacity 1s ease-in-out;
+    }
+
+    #cf:hover img.over{
+        opacity:0;
+    }
+
+    img#r2
+    {
+        transition-delay: 4s;
+    }
+
+    img#r1
+    {
+        transition-delay: 2s;
+    }
+
+    img#r0
+    {
+        transition-delay: 0s;
+    }
+</style>
+<div id="cf">
+    <img id="r3" class="under" src='out/app_ui/map-drones-r3.png' />
+    <img id="r2" class="over"  src='out/app_ui/map-drones-r2.png' />
+    <img id="r1" class="over"  src='out/app_ui/map-drones-r1.png' />
+    <img id="r0" class="over"  src='out/app_ui/map-drones-r0.png' />
+  </div>
+<!-- <img src='out/app_ui/b.png' /><br>
+<img src='out/app_ui/a.png' /><br>
+<img src='out/app_ui/list.png' /><br>
+<img src='out/asn1/swim1.png' /><br>
+<img src='out/asn1/swim2.png' /><br>
+<img src='out/json/droneEncryptedFlow.png' /><br>
+<img src='out/json/dronePlaintext.png' /><br>
+<img src='out/json/droneEncrypted.png' /><br> -->
