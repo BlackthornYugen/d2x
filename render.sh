@@ -24,4 +24,19 @@ done
 
 # Prereq: Imagemagic for gif
 # yum install ImageMagick (or similar)
-convert -delay 100 out/app_ui/map*.png -loop 0 out/movie.gif
+convert \
+    -delay 200 \
+        out/app_ui/map-drones-r?.png \
+    -loop 0 \
+    out/drone-map.gif
+
+
+convert \
+    -delay 200 \
+        out/app_ui/nav-r?.png \
+        out/app_ui/nav-r2.png \
+    -loop 0 \
+    out/drone-details.gif
+
+find out -name '*.png' | xargs -n1 printf "<img src='%s' /><br>\n" |  tee all-assets.html
+cat drone-map.html <(echo "<h1>All Assets</h1>") all-assets.html | tee index.html

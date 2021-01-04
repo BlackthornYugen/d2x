@@ -1,34 +1,130 @@
-@startsalt a
+@startsalt nav-r0
 {
-== <&location> DJI 742 
+== <&person> jskw
 {T#
-+ Direction   | NW
-+ Range       | 4.2m 
++ Direction   | ?
++ Range       | ?
++ Altitude    | ?
++ Type        | Pilot
+}
+== <&location> jskw.1 
+{T#
++ Direction   | 225° (NWW)
++ Range       | 3042m 
 + Altitude    | 30m
++ Type        | DJI Phantom 4 Pro
 }
-
-== <&person> DJI 742 Pilot
+== <&person> asd
 {T#
-+Direction    | Range (m)     | Altitude (m)
-+ Encrypted   | Encrypted     | 45
-+ America     | 964 million   | 30
++ Direction   | ?
++ Range       | ?
++ Altitude    | ?
++ Type        | Pilot
 }
-[Watch] | [Locate Pilot] ||
+== <&location> asd.1
+{T#
++ Direction   | 180° (S)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | PowerVision PowerEgg X
+}
+== <&location> asd.2
+{T#
++ Direction   | 135° (SE)
++ Range       | 3042m 
++ Altitude    | 50m
++ Type        | PowerVision PowerEgg X
+}
 }
 @endsalt
 
-@startsalt b
-{^"My group box"
-  Login    | "asd   "
-  Password | "****     "
+@startsalt nav-r1
+{
+== <&person> jskw
+{T#
++ Direction   | ?
++ Range       | ?
++ Altitude    | ?
++ Type        | Pilot
+}
+== <&location> jskw.1 
+{T#
++ Direction   | 225° (NWW)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | DJI Phantom 4 Pro
+}
+== <&person> asd
+{T#
++ Direction   | 45° (NE)
++ Range       | 3042m 
++ Altitude    | 0m
++ Type        | Pilot
+}
+== <&location> asd.1
+{T#
++ Direction   | 180° (S)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | PowerVision PowerEgg X
+}
+== <&location> asd.2
+{T#
++ Direction   | 135° (SE)
++ Range       | 3042m 
++ Altitude    | 50m
++ Type        | PowerVision PowerEgg X
+}
+}
+@endsalt
+
+@startsalt nav-r2
+{
+== <&person> jskw
+{T#
++ Direction   | 315° (NNW)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | Pilot
+}
+== <&location> jskw.1 
+{T#
++ Direction   | 225° (NWW)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | DJI Phantom 4 Pro
+}
+== <&person> asd
+{T#
++ Direction   | 45° (NE)
++ Range       | 3042m 
++ Altitude    | 0m
++ Type        | Pilot
+}
+== <&location> asd.1
+{T#
++ Direction   | 180° (S)
++ Range       | 3042m 
++ Altitude    | 30m
++ Type        | PowerVision PowerEgg X
+}
+== <&location> asd.2
+{T#
++ Direction   | 135° (SE)
++ Range       | 3042m 
++ Altitude    | 50m
++ Type        | PowerVision PowerEgg X
+}
+}
+@endsalt
+
+@startsalt AuthTrusted
+{^"Authenticate to third party"
+  Login    | "security@yyb.ca"
   [Cancel] | [  OK   ]
 }
 
 @endsalt
-
-@startuml list
-listopeniconic
-@enduml
 
 @startditaa map-drones-r0
 +----------+  +----------+  +----------+   +----------+ +----------+
@@ -118,11 +214,11 @@ listopeniconic
 @startditaa map-drones-r2
 +----------+  +----------+  +----------+   +----------+ +----------+
 | cBLU    A|  | cBLU    B|  | cBLU    C|   | cBLU    D| | cBLU    E|
-|          |  | +--------+  |          |   |          | |          |
-|          |  | |cPNK    |  |          |   |          | +----+     |
-|          |  | |  jskw  |  |          |   |          | |cGRE|     |
-|1         |  | |        |  |          |   |          | |asd |     |
-+----+-----+  +-+--------+  +----+-----+   +----+-----+ +----+-----+
+|          |  | +--------+  |          |   |          | +-------+  |
+|          |  | |cPNK    |  |          |   |          | |cGRE   |  |
+|          |  | |  jskw  |  |          |   |          | |  asd  |  |
+|1         |  | |        |  |          |   |          | |       |  |
++----+-----+  +-+--------+  +----+-----+   +----+-----+ +-------+--+
 
 +----------+  +----------+  +----------+   +----------+ +----------+
 | cRED     |  | cRED     |  | cRED     |   | cRED     | | cRED     |
@@ -160,11 +256,11 @@ listopeniconic
 @startditaa map-drones-r3
 +----------+  +----------+  +----------+   +----------+ +----------+
 | cRED    A|  | cRED    B|  | cRED    C|   | cRED    D| | cRED    E|
-|          |  |          |  |          |   |          | |          |
-|          |  |   +------+  |          |   |          | +----+     |
-|          |  |   |cPNK  |  |          |   |          | |cGRE|     |
-|1         |  |   | jskw |  |          |   |          | |asd |     |
-+----+-----+  +---+------+  +----+-----+   +----+-----+ +----+-----+
+|          |  | +--------+  |          |   |          | +-------+  |
+|          |  | |cPNK    |  |          |   |          | |cGRE   |  |
+|          |  | |  jskw  |  |          |   |          | |  asd  |  |
+|1         |  | |        |  |          |   |          | |       |  |
++----+-----+  +-+--------+  +----+-----+   +----+-----+ +-------+--+
 
 +----------+  +----------+  +----------+   +----------+ +----------+
 | cRED     |  | cRED     |  | cRED     |   | cRED     | | cRED     |

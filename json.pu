@@ -16,7 +16,7 @@
   },
   "encryption": {
     "isEncrypted": true,
-    "sessionKeys": [["a", "base64"], ["b", "base64"], ["c", "base64"]]
+    "sessionKeys": [["airportKey", "base64"], ["municipalityKey", "base64"], ["myTrustedApiServerKey", "base64"]]
   }
 }
 @endjson
@@ -41,8 +41,9 @@
 }
 @endjson
 
-
 @startuml droneEncryptedFlow
+' Trusted API Server could be run by drone manufactorer or by a comunity.
+' Will submit Audit Logs for trancpanency when authorities try to resolve drone pilot location
 Drone -> Drone : sleep(1000)
 Drone -\ App : broadcast(droneEncrypted)
 Drone -> Drone : sleep(1000)
