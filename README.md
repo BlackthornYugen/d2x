@@ -33,7 +33,9 @@ An example of how an authority might request the operator's location:
 ![A swimlane diagram showing how messages could be decrypted.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow.svg "drone encrypted flow diagram")
 
 ## Audit Logs
-Log GPS decryption requests to one ore more remote services?
+Sign & Log GPS decryption requests to one or more remote services. Should be tamper evedent.
+
+Look for inspiration from Certificate Transparency logs?
 
 ## Application
 A mobile app that could be used get GPS data for pilots and their drones.
