@@ -16,7 +16,7 @@
   },
   "encryption": {
     "isEncrypted": true,
-    "sessionKeys": [["airportKey", "base64"], ["municipalityKey", "base64"], ["myTrustedApiServerKey", "base64"]]
+    "sessionKeys": [["yybKey", "base64"], ["municipalityKey", "base64"], ["myTrustedApiServerKey", "base64"]]
   }
 }
 @endjson
