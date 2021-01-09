@@ -30,7 +30,11 @@ Both in plaintext (no need for encrypted AES session keys):
 
 An example of how an authority might request the operator's location:
 
-![A swimlane diagram showing how messages could be decrypted.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow.svg "drone encrypted flow diagram")
+![A swimlane diagram showing messages broadcasted from drone.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_001.svg)
+
+![A swimlane diagram showing how messages could be decrypted.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_002.svg)
+
+![A swimlane diagram showing log acknowlegement.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_003.svg)
 
 ## Audit Logs
 Sign & Log GPS decryption requests to one or more remote services. Should be tamper evedent.
