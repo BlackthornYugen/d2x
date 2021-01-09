@@ -30,7 +30,7 @@ Both in plaintext (no need for encrypted AES session keys):
 
 An example of how an authority might request the operator's location:
 
-![#f03c15 A swimlane diagram showing messages broadcasted from drone.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_001.svg)
+![#f03c15](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_001.svg)
 
 ![#f03c15 A swimlane diagram showing how messages could be decrypted.](https://raw.githubusercontent.com/BlackthornYugen/d2x/media/out/json/droneEncryptedFlow_002.svg)
 
