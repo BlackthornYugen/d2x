@@ -44,17 +44,23 @@
 @startuml droneEncryptedFlow
 ' Trusted API Server could be run by drone manufactorer or by a comunity.
 ' Will submit Audit Logs for trancpanency when authorities try to resolve drone pilot location
+
+newpage Drone broadcasts
 Drone -> Drone : sleep(1000)
 Drone -\ App : broadcast(droneEncrypted)
 Drone -> Drone : sleep(1000)
 Drone -\ App : broadcast(droneEncrypted)
 Drone -> Drone : sleep(1000)
 Drone -\ App : broadcast(droneEncrypted)
+
+newpage App Locates
 App -> App ++ : UI Tap "LocateDrone"
 App -> App: parse(droneEncrypted)
 App -> Server ++ : Decrypt("EncryptedBase64Payload==")
 Server -\ AuditLog : {"client": "joe@yyz-security.ca", "request": "base64-sha256-sum=="}
 Server -> App -- : {"location": { "lat": 4.4, "longitude": 44.7 }
 deactivate App
+
+newpage Logger Responds
 AuditLog -\ Server: {"saved": "base64-sha256-sum=="}
 @enduml
